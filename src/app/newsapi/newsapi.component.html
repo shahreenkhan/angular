@@ -1,0 +1,20 @@
+<table  class="table table-borderd ">
+    
+    <tr>
+        <th>id</th>
+        <th>author</th>
+        <th>title</th>
+        <th>description</th>
+        <th>image</th>
+    </tr>
+
+    <tr *ngFor= "let n of data1">
+        <th scope="row">{{n.id}}</th>
+        <td>{{n.author}}</td>
+        <td>{{n.title}}</td>
+        <td>{{n.description}}</td>
+        <td><img [src]="n.urlToImage" width="100px" height="100px" alt=""> </td>
+
+    </tr>
+
+</table>

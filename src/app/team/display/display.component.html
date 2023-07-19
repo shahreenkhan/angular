@@ -1,0 +1,29 @@
+<p>display Team!</p>
+
+<table class="table table-danger"  >
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Body</th>
+        <!-- <th scope="col">Description</th> -->
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+     
+    <tr *ngFor= "let d of data">
+      
+      <td>{{d.id}}</td>
+      <td>{{d.title}}</td>
+      <td>{{d.body}}</td>
+      <!-- <td>{{d.description}}</td> -->
+      <td>
+        <a class="btn btn-info" [routerLink]="['/team-view/',d.id]">View</a>
+        <a class="btn btn-success" [routerLink]="['/teamedit/',d.id]" >Edit</a>
+        <a class="btn btn-danger">Delete</a>
+      </td>
+
+  </tr>
+</tbody>
+</table>

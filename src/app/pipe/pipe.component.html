@@ -1,0 +1,39 @@
+<div class="bg-danger p-5 text-white text-center font-weight-bold display-3">
+<h1>{{"Anil" | lowercase}}</h1>
+<h1>{{"anil" | titlecase}}</h1>
+
+<p>My Name is:<span class="text-dark"> {{myname | lowercase}}</span>ngpipe</p>
+<br><br>
+<p>My Name is:<span class="text-dark"> {{myname | slice:4}}</span>ngpipe</p>
+<p>My Name is:<span class="text-dark"> {{myname | slice:4:9}}</span>ngpipe</p>
+
+</div>
+
+<div class="bg-secondary p-5 text-white text-center font-weight-bold display-3">
+    <p>My Date of birth:<span class="text-dark"> {{mydate | date}}</span></p>
+    <p>My Date of birth:<span class="text-dark"> {{ mydate | date:'shortTime'}}</span></p>
+    <p>My Number:<span class="text-dark"> {{mynumber | number}}</span></p>
+    <p>My Number:<span class="text-dark"> {{mynumber | percent}}</span></p>
+    <p>My Currency:<span class="text-dark"> {{mycurrency | currency:'INR'}}</span></p>
+
+</div>
+
+<table  class="table table-borderd ">
+    
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>city</th>
+      
+    </tr>
+
+    <tr *ngFor= "let n of mydata">
+        <th scope="row">{{n.id}}</th>
+       
+        <td>{{n.name}}</td>
+        <td>{{n.city}}</td>
+        
+
+    </tr>
+
+</table> 

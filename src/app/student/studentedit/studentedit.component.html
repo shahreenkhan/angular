@@ -1,0 +1,8 @@
+ <form [formGroup]="form" (ngSubmit)="update()"> 
+  
+  Title:
+   <input type="text" formControlName="title"><br><br>
+   Body:
+   <input type="text" formControlName="body"><br><br>
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
